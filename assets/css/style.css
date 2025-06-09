@@ -201,7 +201,7 @@
                                                                                                                                                                                                          color: var(--theme-color);
                                                                                                                                                                                                      }
                                                                                                                                                                                                      
-                                                                                                                                                                                                     .slick-arrow {
+                                                                                                                                                                                                     .swiper-button {
                                                                                                                                                                                                          display: inline-block;
                                                                                                                                                                                                          padding: 0;
                                                                                                                                                                                                          background-color: var(--white-color);
