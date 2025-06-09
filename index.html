@@ -12,9 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- <link rel="stylesheet" type="text/css" href="" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" /> -->
+
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -692,7 +696,7 @@
 
         </div>
     </section>
-    <section class="testimonial-sec5 overflow-hidden space-top">
+    <!-- <section class="testimonial-sec5 overflow-hidden space-top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -724,7 +728,8 @@
                                             <p class="testi-box_text">Insurance customers may have questions or concerns that require assistance from customer support representatives.</p>
                                             <div class="media">
                                                 <div class="media-left">
-                                                    <h3 class="testi-box_name h6">Ralph Edwards</h3><span class="testi-box_desig">Chief Executive</span></div>
+                                                    <h3 class="testi-box_name h6">Ralph Edwards</h3><span class="testi-box_desig">Chief Executive</span>
+                                                </div>
                                                 <div class="media-body"><i class="fa fa-quote-right"></i></div>
                                             </div>
                                         </div>
@@ -764,120 +769,213 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="testi-box5 slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 560px;" tabindex="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.testimonial-carousel').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: false,
+                responsive: [{
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+
+            $('#prev').click(function() {
+                $('.testimonial-carousel').slick('slickPrev');
+            });
+
+            $('#next').click(function() {
+                $('.testimonial-carousel').slick('slickNext');
+            });
+        });
+    </script> -->
+
+
+    <section class="testimonial-sec5 overflow-hidden space-top">
+        <div class="container">
+            <div class="row" style="display:flex; flex-wrap: wrap;">
+                <div class="col-lg-4" style="flex: 0 0 33.3333%; max-width: 33.3333%;">
+                    <div class="title-area">
+                        <span class="sub-title">Testimonial</span>
+                        <h2 class="sec-title">What our clients say about us</h2>
+                    </div>
+                    <div class="testimonial-slider5-arrow mb-lg-0 mb-30">
+                        <div class="swiper-button swiper-button-prev"><i class="fa fa-long-arrow-left"></i></div>
+                        <div class="swiper-button swiper-button-next"><i class="fa fa-long-arrow-right"></i></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8" style="flex: 0 0 66.6666%; max-width: 66.6666%;">
+                    <div class="swiper testimonialSwiper" id="testimonial-slider">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <div class="testi-box5">
                                     <div class="testi-box_wrap">
                                         <div class="testi-box_avater">
-                                            <div class="thumb"><img src="https://themeholy.com/html/insurax/demo/assets/img/testimonial/testi_3_1.png" alt="testimonial"></div>
+                                            <div class="thumb">
+                                                <img src="https://themeholy.com/html/insurax/demo/assets/img/testimonial/testi_3_1.png" alt="testimonial"></div>
                                         </div>
                                         <div class="testi-box_content">
-                                            <h4 class="testi-box_title h6">“Best Services” <span class="review-rating"><span><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i></span></span>
-                                            </h4>
-                                            <p class="testi-box_text">Insurance is a highly regulated industry, and customers want to feel confident that they are working with a reputable provider.</p>
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <h3 class="testi-box_name h6">Kristin Watson</h3><span class="testi-box_desig">General Manager</span></div>
-                                                <div class="media-body"><i class="fa fa-quote-right"></i></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testi-box5 slick-slide" data-slick-index="2" aria-hidden="true" style="width: 560px;" tabindex="-1">
-                                    <div class="testi-box_wrap">
-                                        <div class="testi-box_avater">
-                                            <div class="thumb"><img src="https://themeholy.com/html/insurax/demo/assets/img/testimonial/testi_3_1.png" alt="testimonial"></div>
-                                        </div>
-                                        <div class="testi-box_content">
-                                            <h4 class="testi-box_title h6">“Awesome Services” <span class="review-rating"><span><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i></span></span>
+                                            <h4 class="testi-box_title">“Awesome Services”
+                                                <span class="review-rating">
+                        <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i>
+                      </span>
                                             </h4>
                                             <p class="testi-box_text">Insurance customers may have questions or concerns that require assistance from customer support representatives.</p>
                                             <div class="media">
                                                 <div class="media-left">
-                                                    <h3 class="testi-box_name h6">Ralph Edwards</h3><span class="testi-box_desig">Chief Executive</span></div>
+                                                    <h3 class="testi-box_name">Ralph Edwards</h3>
+                                                    <span class="testi-box_desig">Chief Executive</span>
+                                                </div>
                                                 <div class="media-body"><i class="fa fa-quote-right"></i></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="testi-box5 slick-slide" data-slick-index="3" aria-hidden="true" style="width: 560px;" tabindex="-1">
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <div class="testi-box5">
                                     <div class="testi-box_wrap">
                                         <div class="testi-box_avater">
                                             <div class="thumb"><img src="https://themeholy.com/html/insurax/demo/assets/img/testimonial/testi_3_1.png" alt="testimonial"></div>
                                         </div>
                                         <div class="testi-box_content">
-                                            <h4 class="testi-box_title h6">“Better Services” <span class="review-rating"><span><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i></span></span>
+                                            <h4 class="testi-box_title">“Better Services”
+                                                <span class="review-rating">
+                                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i>
+                                                </span>
                                             </h4>
                                             <p class="testi-box_text">Insurance websites should provide clear and concise information about their products, coverage options, and pricing.</p>
                                             <div class="media">
                                                 <div class="media-left">
-                                                    <h3 class="testi-box_name h6">Dianne Russell</h3><span class="testi-box_desig">Web Developer</span></div>
+                                                    <h3 class="testi-box_name">Dianne Russell</h3>
+                                                    <span class="testi-box_desig">Web Developer</span>
+                                                </div>
                                                 <div class="media-body"><i class="fa fa-quote-right"></i></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="testi-box5 slick-slide slick-cloned" data-slick-index="4" id="" aria-hidden="true" style="width: 560px;" tabindex="-1">
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <div class="testi-box5">
                                     <div class="testi-box_wrap">
                                         <div class="testi-box_avater">
                                             <div class="thumb"><img src="https://themeholy.com/html/insurax/demo/assets/img/testimonial/testi_3_1.png" alt="testimonial"></div>
                                         </div>
                                         <div class="testi-box_content">
-                                            <h4 class="testi-box_title h6">“Good Services” <span class="review-rating"><span><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i></span></span>
+                                            <h4 class="testi-box_title">“Good Services”
+                                                <span class="review-rating">
+                                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i>
+                                                </span>
                                             </h4>
                                             <p class="testi-box_text">The website should have a user-friendly design that is easy to navigate, with clear calls-to-action that guide the user.</p>
                                             <div class="media">
                                                 <div class="media-left">
-                                                    <h3 class="testi-box_name h6">Ronald Richards</h3><span class="testi-box_desig">UI Designer.</span></div>
+                                                    <h3 class="testi-box_name">Ronald Richards</h3>
+                                                    <span class="testi-box_desig">UI Designer.</span>
+                                                </div>
                                                 <div class="media-body"><i class="fa fa-quote-right"></i></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="testi-box5 slick-slide slick-cloned" data-slick-index="5" id="" aria-hidden="true" style="width: 560px;" tabindex="-1">
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide">
+                                <div class="testi-box5">
                                     <div class="testi-box_wrap">
                                         <div class="testi-box_avater">
                                             <div class="thumb"><img src="https://themeholy.com/html/insurax/demo/assets/img/testimonial/testi_3_1.png" alt="testimonial"></div>
                                         </div>
                                         <div class="testi-box_content">
-                                            <h4 class="testi-box_title h6">“Best Services” <span class="review-rating"><span><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i></span></span>
+                                            <h4 class="testi-box_title">“Good Services”
+                                                <span class="review-rating">
+                                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i>
+                                                </span>
                                             </h4>
-                                            <p class="testi-box_text">Insurance is a highly regulated industry, and customers want to feel confident that they are working with a reputable provider.</p>
+                                            <p class="testi-box_text">The website should have a user-friendly design that is easy to navigate, with clear calls-to-action that guide the user.</p>
                                             <div class="media">
                                                 <div class="media-left">
-                                                    <h3 class="testi-box_name h6">Kristin Watson</h3><span class="testi-box_desig">General Manager</span></div>
+                                                    <h3 class="testi-box_name">Ronald Richards</h3>
+                                                    <span class="testi-box_desig">UI Designer.</span>
+                                                </div>
                                                 <div class="media-body"><i class="fa fa-quote-right"></i></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="testi-box5 slick-slide slick-cloned" data-slick-index="6" id="" aria-hidden="true" style="width: 560px;" tabindex="-1">
+                            </div>
+
+                            <!-- Slide 5 -->
+                            <div class="swiper-slide">
+                                <div class="testi-box5">
                                     <div class="testi-box_wrap">
                                         <div class="testi-box_avater">
                                             <div class="thumb"><img src="https://themeholy.com/html/insurax/demo/assets/img/testimonial/testi_3_1.png" alt="testimonial"></div>
                                         </div>
                                         <div class="testi-box_content">
-                                            <h4 class="testi-box_title h6">“Awesome Services” <span class="review-rating"><span><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i></span></span>
+                                            <h4 class="testi-box_title">“Good Services”
+                                                <span class="review-rating">
+                                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i>
+                                                </span>
                                             </h4>
-                                            <p class="testi-box_text">Insurance customers may have questions or concerns that require assistance from customer support representatives.</p>
+                                            <p class="testi-box_text">The website should have a user-friendly design that is easy to navigate, with clear calls-to-action that guide the user.</p>
                                             <div class="media">
                                                 <div class="media-left">
-                                                    <h3 class="testi-box_name h6">Ralph Edwards</h3><span class="testi-box_desig">Chief Executive</span></div>
+                                                    <h3 class="testi-box_name">Ronald Richards</h3>
+                                                    <span class="testi-box_desig">UI Designer.</span>
+                                                </div>
                                                 <div class="media-body"><i class="fa fa-quote-right"></i></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="testi-box5 slick-slide slick-cloned" data-slick-index="7" id="" aria-hidden="true" style="width: 560px;" tabindex="-1">
+                            </div>
+                            <!-- Slide 6 -->
+                            <div class="swiper-slide">
+                                <div class="testi-box5">
                                     <div class="testi-box_wrap">
                                         <div class="testi-box_avater">
                                             <div class="thumb"><img src="https://themeholy.com/html/insurax/demo/assets/img/testimonial/testi_3_1.png" alt="testimonial"></div>
                                         </div>
                                         <div class="testi-box_content">
-                                            <h4 class="testi-box_title h6">“Better Services” <span class="review-rating"><span><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i></span></span>
+                                            <h4 class="testi-box_title">“Good Services”
+                                                <span class="review-rating">
+                                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i>
+                                                </span>
                                             </h4>
-                                            <p class="testi-box_text">Insurance websites should provide clear and concise information about their products, coverage options, and pricing.</p>
+                                            <p class="testi-box_text">The website should have a user-friendly design that is easy to navigate, with clear calls-to-action that guide the user.</p>
                                             <div class="media">
                                                 <div class="media-left">
-                                                    <h3 class="testi-box_name h6">Dianne Russell</h3><span class="testi-box_desig">Web Developer</span></div>
+                                                    <h3 class="testi-box_name">Ronald Richards</h3>
+                                                    <span class="testi-box_desig">UI Designer.</span>
+                                                </div>
                                                 <div class="media-body"><i class="fa fa-quote-right"></i></div>
                                             </div>
                                         </div>
@@ -890,15 +988,29 @@
             </div>
         </div>
     </section>
+    <!-- <style>
+        .swiper-slide {
+            width: 100% !important;
+            flex: 0 0 auto !important;
+        }
+    </style> -->
 
     <script>
-        $('testimonial-slider').slick({
-            prevArrow: '<button class="slick-prev">←</button>',
-            nextArrow: '<button class="slick-next">→</button>',
-            infinite: true,
-            slidesToShow: 2, // or 1 as needed
-            slidesToScroll: 1,
-            autoplay: true,
+        var swiper = new Swiper(".testimonialSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            breakpoints: {
+                992: {
+                    slidesPerView: 1
+                },
+                0: {
+                    slidesPerView: 1
+                }
+            }
         });
     </script>
 
@@ -910,7 +1022,8 @@
 <link rel="stylesheet " href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css " integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N " crossorigin="anonymous ">
 
 <script src="assets/js/main.js "></script>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js "></script>
 
 
