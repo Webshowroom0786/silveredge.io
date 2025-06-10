@@ -175,18 +175,55 @@ const swiper = new Swiper(".mySwiper", {
 
 
 var testimonialSwiper = new Swiper(".testimonialSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+        992: {
+            slidesPerView: 1
+        },
+        0: {
+            slidesPerView: 1
+        }
+    }
+});
+
+
+var itcertification = new Swiper(".cardSwiper", {
+    slidesPerView: 4, // Show 4 cards
+    slidesPerGroup: 1, // Slide one at a time
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        0: {
             slidesPerView: 1,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev"
-            },
-            breakpoints: {
-                992: {
-                    slidesPerView: 1
-                },
-                0: {
-                    slidesPerView: 1
-                }
-            }
-        });
+            slidesPerGroup: 1
+        },
+        576: {
+            slidesPerView: 2,
+            slidesPerGroup: 1
+        },
+        768: {
+            slidesPerView: 2,
+            slidesPerGroup: 1
+        },
+        992: {
+            slidesPerView: 3,
+            slidesPerGroup: 1
+        },
+        1200: {
+            slidesPerView: 4,
+            slidesPerGroup: 1
+        }
+    }
+});
+
+// Set current year in footer
+document.getElementById("year").textContent = new Date().getFullYear();
